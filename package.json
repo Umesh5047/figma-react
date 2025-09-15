@@ -1,5 +1,5 @@
 {
-  "name": "figma-react-assignment",
+  "name": "figma-react",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.x.x",
-    "react-dom": "^18.x.x"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "vite": "^5.x.x",
-    "@vitejs/plugin-react": "^4.3.1"
+    "vite": "^5.4.20",
+    "@vitejs/plugin-react": "^4.3.1",
+    "tailwindcss": "^3.3.3",
+    "postcss": "^8.4.30",
+    "autoprefixer": "^10.4.15"
   }
 }
