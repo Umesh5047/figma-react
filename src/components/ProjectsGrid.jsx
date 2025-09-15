@@ -1,18 +1,24 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { projects } from '../data/sampleProjects'
 
-export default function ProjectsGrid() {
+function ProjectsGrid() {
+  const projects = [
+    { title: 'Project One', description: 'This is the first project.' },
+    { title: 'Project Two', description: 'This is the second project.' },
+    { title: 'Project Three', description: 'This is the third project.' },
+    { title: 'Project Four', description: 'This is the fourth project.' },
+  ]
+
   return (
-    <section id="projects" className="py-12">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p) => (
-            <ProjectCard key={p.id} project={p} />
-          ))}
-        </div>
+    <section id="projects" className="p-8 bg-white">
+      <h2 className="text-3xl font-bold mb-6 text-center">Projects</h2>
+      <div className="flex flex-wrap justify-center gap-6">
+        {projects.map((proj, idx) => (
+          <ProjectCard key={idx} title={proj.title} description={proj.description} />
+        ))}
       </div>
     </section>
   )
 }
+
+export default ProjectsGrid
