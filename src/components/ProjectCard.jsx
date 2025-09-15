@@ -1,18 +1,14 @@
 import React from 'react'
+import placeholder from '../assets/placeholder.jpg'
 
-export default function ProjectCard({ project }) {
+function ProjectCard({ title, description }) {
   return (
-    <article className="bg-white rounded-2xl shadow-md overflow-hidden">
-      <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h3 className="font-semibold text-lg">{project.title}</h3>
-        <p className="text-sm text-gray-600 mt-2">{project.description}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {project.tags.map((t) => (
-            <span key={t} className="text-xs px-2 py-1 bg-gray-100 rounded-full">{t}</span>
-          ))}
-        </div>
-      </div>
-    </article>
+    <div className="border border-gray-300 rounded-lg p-4 w-64 shadow-sm hover:shadow-md transition">
+      <img src={placeholder} alt={title} className="w-full rounded-md mb-2" />
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-gray-700 mt-1">{description}</p>
+    </div>
   )
 }
+
+export default ProjectCard
