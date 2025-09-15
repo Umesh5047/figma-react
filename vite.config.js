@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // ...other config if needed
+  // you can leave other settings here as needed
 })
