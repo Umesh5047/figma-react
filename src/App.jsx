@@ -1,15 +1,16 @@
 import React from 'react'
+import Header from './components/Header'
 import Hero from './components/Hero'
-import ProjectCard from './components/ProjectCard'
+import ProjectsGrid from './components/ProjectsGrid'
+import Footer from './components/Footer'
 
 function App() {
   return (
     <div>
+      <Header />
       <Hero />
-      <div className="flex gap-4 p-4">
-        <ProjectCard title="Project One" description="This is the first project." />
-        <ProjectCard title="Project Two" description="This is the second project." />
-      </div>
+      <ProjectsGrid />
+      <Footer />
     </div>
   )
 }
